@@ -12,12 +12,18 @@ function getTodo() {
     updateButton.append("Edit");                         // setting button name
     updateButton.setAttribute("onclick", "editList(this)"); // onclick calling function and passes itself
     updateButton.setAttribute("class", "updateButton");
-    createList.append(updateButton);                        // inserting update button into list
+    // createList.append(updateButton);                        // inserting update button into list
  
     let deleteButton = document.createElement('button'); // creating button
     deleteButton.append("Delete");                       // setting button name
     deleteButton.setAttribute("onclick","delteElement(this.parentNode)"); // onclick calling function and passes its parent node
-    createList.append(deleteButton);                     // inserting this button into list
+    // createList.append(deleteButton);                     // inserting this button into list
+
+    let bothButtonDiv = document.createElement('div');
+    bothButtonDiv.append(updateButton);
+    bothButtonDiv.append(deleteButton);
+    createList.append(bothButtonDiv);
+    console.log(bothButtonDiv);
 
     todoList.append(createList);                        // inserting list into UL
     todoInput.value = "";                               // empty the input field
@@ -25,13 +31,13 @@ function getTodo() {
 }
 
 function delteElement(e) {
-    e.remove();                                         // removing list
+    e.parentNode.remove();                                         // removing list
 }
 
 function editList(e){
-    
-    let newTodo = prompt("Enter a new text", e.parentNode.firstChild.nodeValue); // getting new todo input from user
-    e.parentNode.firstChild.nodeValue = newTodo;        // upldate old todo item
+    // console.log(e)
+    let newTodo = prompt("Enter a new text", e.parentNode.parentNode.firstChild.nodeValue); // getting new todo input from user
+    e.parentNode.parentNode.firstChild.nodeValue = newTodo;        // upldate old todo item
 }
 
 function deleteAll() {

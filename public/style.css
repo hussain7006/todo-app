@@ -4,34 +4,58 @@ body {
 }
 
 .main {
-    /* border: 2px solid red; */
     box-shadow: 1px 1px 2px 1px gray;
     width: 80%;
     margin: auto;
     padding: 2px;
+    border-radius: 10px;
+}
+.buttonsDiv {
+    /* border: 2px solid red; */
+    margin: auto;
+    width: 25%;
+}
+.inputDiv {
+    display: flex;
 }
 .inputDiv > input {
     margin: 5px auto;
     border: 2px solid green;
-    /* width: 80%; */
+    width: 70%;
+    height: 50px;
     border-radius: 5px;
+    font-size: 1.5em;
+}
+.submit {
+    background-color: skyblue;
+    width: 95px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.deleteAll {
+    background-color:lightcoral;
+    width: 95px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bolder;
 }
 
 li {
     list-style: none;
-    /* border: 2px solid rgb(0, 70, 128); */
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    /* margin: auto; */
-    /* text-align: left; */
-    /* display: flex; */
-    /* justify-content: space-evenly */
+    font-size: 1.5em;
+    
 }
 ul {
     /* border: 2px solid red; */
     width: 70%;
     margin: auto;
 }
-.updateButton {
+/* .updateButton {
     margin-left: 5px;
 
-}
+} */
