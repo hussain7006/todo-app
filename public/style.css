@@ -1,7 +1,8 @@
 body {
     text-align: center;
     margin-top: 50px;
-    background-image: url("./images/todo-image.jpg");
+    /* background-image: url("https://static.skillshare.com/uploads/project/5d295996bf2f02926011f3c99bd67869/7278d5fd"); */
+    background-image: url("./images/todo-image-1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;

@@ -6,6 +6,31 @@
     <title>ToDo App</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRSe_GG4WJVuNaXqPLCzzUU53mU5baZRE",
+            authDomain: "todo-daily-app.firebaseapp.com",
+            databaseURL: "https://todo-daily-app.firebaseio.com",
+            projectId: "todo-daily-app",
+            storageBucket: "todo-daily-app.appspot.com",
+            messagingSenderId: "252874635338",
+            appId: "1:252874635338:web:59e1103d4094898f870eb3",
+            measurementId: "G-6JNP69G9XT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
 </head>
 <body>
     <div class="main">
@@ -13,7 +38,7 @@
             <input type="text" id="todoInput">
             <div class="buttonsDiv">
                 <button onclick="getTodo()" class="submit">Submit</button>
-                <button onclick="deleteAll()" class="deleteAll">Delete All</button>
+                <button onclick="deleteAllData()" class="deleteAll">Delete All</button>
             </div>
         </div>
 
