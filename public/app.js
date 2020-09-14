@@ -1,4 +1,31 @@
 
+//   firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       // User is signed in.
+//       var displayName = user.displayName;
+//       var email = user.email;
+//       var emailVerified = user.emailVerified;
+//       var photoURL = user.photoURL;
+//       var isAnonymous = user.isAnonymous;
+//       var uid = user.uid;
+//       var providerData = user.providerData;
+
+
+//       console.log("displayName",displayName)
+//       console.log("email",email)
+//       console.log("emailVerified",emailVerified)
+//       console.log("uid",uid)
+//       console.log("isAnonymous",isAnonymous)
+//       console.log("providerData",providerData)
+//       // ...
+
+//     } else {
+//         console.log("signout ")
+//       // User is signed out.
+//       // ...
+//     }
+//   });
+
 let todoInput = document.getElementById("todoInput");   // getting ID of input field
 let todoList = document.getElementById("todoList");     // getting Id of UL
 
@@ -84,4 +111,7 @@ function fillingList(){
 
     })
 }
+
+
+
 
