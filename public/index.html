@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
 
     <script>
         // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
             apiKey: "AIzaSyCRSe_GG4WJVuNaXqPLCzzUU53mU5baZRE",
             authDomain: "todo-daily-app.firebaseapp.com",
@@ -24,36 +17,116 @@
             projectId: "todo-daily-app",
             storageBucket: "todo-daily-app.appspot.com",
             messagingSenderId: "252874635338",
-            appId: "1:252874635338:web:59e1103d4094898f870eb3",
-            measurementId: "G-6JNP69G9XT"
+            appId: "1:252874635338:web:09678b2113336d17870eb3",
+            measurementId: "G-FHEK9RLVNX"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+        // firebase.analytics();
     </script>
 
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 60%;
+            margin: auto;
+            background-image: url("./images/todo-image.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            /* background-color: darkcyan; */
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .cancelbtn {
+            background-color: #f44336;
+            font-weight: bolder;
+            font-size: 1em;
+        }
+
+        .signIn {
+
+            font-weight: bolder;
+            font-size: 1em;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        label {
+            border-radius: 10px;
+            border-width: 2px;
+            /* font-weight:1em; */
+            font-size: 1.5em;
+            color: white;
+        }
+
+        label>b {
+            font-size: 1em;
+            color: white;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="signOut">
-        <button onclick="signOut()">Log out</button>
+    <div>
+        <h2 style="text-align: center; color: greenyellow; font-size: 3em; font-weight:1000; word-wrap: none;">DAILY
+            TODO APP</h2>
     </div>
-    <div class="main">
+    <div class="container">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" placeholder="Enter Email" name="email">
 
-        <div class="inputDiv">
-            <input type="text" id="todoInput">
-            <div class="buttonsDiv">
-                <button onclick="getTodo()" class="submit">Submit</button>
-                <button onclick="deleteAllData()" class="deleteAll">Delete All</button>
-            </div>
-        </div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id=password placeholder="Enter Password" name="psw">
 
-        <div>
-            <ul id="todoList">
-
-            </ul>
-        </div>
+        <button type="submit" class="signIn" onclick="signIn()">Sign In
+        </button>
     </div>
-    
+
+    <div class="container">
+        <button type="button" class="cancelbtn" onclick="window.location='signUp.html' ">SignUp
+        </button>
+        <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+    </div>
 </body>
-<script src="./app.js"></script>
+<script src="app.js"></script>
+
 </html>

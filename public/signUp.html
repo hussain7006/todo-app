@@ -11,26 +11,30 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
-          apiKey: "AIzaSyCRSe_GG4WJVuNaXqPLCzzUU53mU5baZRE",
-          authDomain: "todo-daily-app.firebaseapp.com",
-          databaseURL: "https://todo-daily-app.firebaseio.com",
-          projectId: "todo-daily-app",
-          storageBucket: "todo-daily-app.appspot.com",
-          messagingSenderId: "252874635338",
-          appId: "1:252874635338:web:09678b2113336d17870eb3",
-          measurementId: "G-FHEK9RLVNX"
+            apiKey: "AIzaSyCRSe_GG4WJVuNaXqPLCzzUU53mU5baZRE",
+            authDomain: "todo-daily-app.firebaseapp.com",
+            databaseURL: "https://todo-daily-app.firebaseio.com",
+            projectId: "todo-daily-app",
+            storageBucket: "todo-daily-app.appspot.com",
+            messagingSenderId: "252874635338",
+            appId: "1:252874635338:web:09678b2113336d17870eb3",
+            measurementId: "G-FHEK9RLVNX"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         // firebase.analytics();
-      </script>
+    </script>
 
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
             width: 60%;
             margin: auto;
-            background-color:cornflowerblue;
+            background-image: url("./images/todo-image-1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            /* background-color:cornflowerblue; */
         }
 
         form {
@@ -48,8 +52,9 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
+            border-radius: 10px;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
@@ -57,34 +62,40 @@
             width: 100%;
         }
 
-        button:hover {
+        /* button:hover {
             opacity: 0.8;
-        }
+        } */
 
         .cancelbtn {
             width: 100%;
-            padding: 10px 18px;
+            /* height: 105%; */
+            padding: 14px 19px;
             background-color: blue;
+            font-size: 1em;
+            font-weight: bolder;
         }
-
-        /* .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-        } */
-
-        /* img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        } */
 
         .container {
             padding: 16px;
         }
 
-        /* span.psw {
-            float: right;
-            padding-top: 16px;
-        } */
+        .signUp {
+            /* padding: 16px; */
+            background-color: green;
+            font-size: 1em;
+            font-weight: bolder;
+        }
+
+        label {
+            border-radius: 10px;
+            border-width: 2px;
+            font-size: 1.5em;
+        }
+
+        label>b {
+            font-size: 1em;
+            color: black;
+        }
 
         /* Change styles for span and cancel button on extra small screens */
         @media screen and (max-width: 300px) {
@@ -102,37 +113,25 @@
 
 <body>
 
-    <h2 style="text-align: center">Registration Form</h2>
+    <h2 style="text-align: center; color: black; font-size: 2.4em; font-weight:1000;">Registration Form</h2>
 
-    <!-- <form onsubmit="signUp()"> -->
-        <!-- <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div> -->
+    <div class="container">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" placeholder="Enter Email" name="email">
 
-        <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="email" id="email" placeholder="Enter Email" name="email" >
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id=password placeholder="Enter Password" name="psw">
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id=password placeholder="Enter Password" name="psw" >
+        <button type="submit" class="signUp" onclick="signUp()">
+            Sign Up
+        </button>
+    </div>
 
-            <button type="submit" onclick="signUp()">Sign Up</button>
-            <!-- <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label> -->
-        </div>
-
-        <div class="container" >
-            <button 
-                type="button" 
-                class="cancelbtn"
-                onclick="window.location='signIn.html' "
-                >Already Registered
-            </button>
-            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
-        </div>
-    <!-- </form>  -->
-
+    <div class="container">
+        <button type="button" class="cancelbtn" onclick="window.location='index.html' ">Already Registered
+        </button>
+    </div>
 </body>
-    <script src="signUp.js"></script>
+<script src="signUp.js"></script>
+
 </html>
